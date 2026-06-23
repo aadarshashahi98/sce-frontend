@@ -54,7 +54,7 @@ export function BuiltToLast() {
                         <div className="w-133 h-70">
                             <img className="w-full h-full object-cover" src={item.image} alt={item.title} />
                         </div>
-                        <div className="border-x-2 border-b-2 border-[#CBBDBD] p-10 space-y-5">
+                        <div className="border-x border-b border-[#cecece] p-10 space-y-5">
                             <h3 className="text-2xl font-semibold">{item.title}</h3>
                             <p className="text-sm">{item.description}</p>
                             <div>
@@ -69,7 +69,7 @@ export function BuiltToLast() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="border-2 border-t-0 border-[#CBBDBD] px-4 py-2">
+                        <div className="border border-t-0 border-[#cecece] px-4 py-2">
                             <span>Type: {item.type}</span>
                         </div>
                     </div>
