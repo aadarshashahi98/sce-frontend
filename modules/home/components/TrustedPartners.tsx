@@ -18,7 +18,7 @@ export function TrustedPartners() {
             </div>
             <div className="grid grid-cols-4 gap-4">
                 { trustedPartners.map((item, index) =>
-                    <div key={index} className="bg-white flex gap-2 items-center rounded-3xl">
+                    <div key={index} className="bg-white flex gap-2 items-center rounded-3xl transition-all duration-500 ease-out hover:shadow-2xl">
                         <div className="w-25 h-25">
                             <img className="w-full h-full object-cover" src={item.logo} alt={item.name} />
                         </div>

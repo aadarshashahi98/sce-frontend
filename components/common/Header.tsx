@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const headerContent: Record<
   string,
@@ -48,6 +48,7 @@ export const nav = ["Home", "About Us", "Services", "Projects", "Contact Us"]
 
 export function Header() {
   const pathname = usePathname()
+  const router = useRouter()
   const content = headerContent[pathname] ?? headerContent["/"]
   const isHome = pathname === "/"
 
@@ -66,28 +67,19 @@ export function Header() {
 
   return (
     <header className="relative w-full h-screen">
-
-      <div className="absolute inset-0">
-        <img
-          src="/assets/hero.jpg"
-          alt="Hero Background"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
       <div className="absolute inset-0 bg-linear-to-b from-[#0B1F4F] from-0% via-[#0B1F4F]/56 via-19% to-[#0B1F4F]/56 to-100%" />
 
       <div
         className={`
           fixed top-0 left-0 w-full z-50
-          flex justify-between items-center px-5 py-3
+          flex justify-between items-center px-5 py-1
           transition-all duration-300
           ${scrolled ? "bg-[#F5F5F5] shadow-md" : "bg-transparent"}
         `}
       >
 
         <div className="flex items-center">
-          <div className="w-20 h-20">
+          <div className="w-15 h-15">
             <img
               src="/assets/seclogo.png"
               alt="Logo"
@@ -95,20 +87,20 @@ export function Header() {
             />
           </div>
 
-          <div className="flex flex-col text-sm ml-2">
+          <div className="flex flex-col text-xs ml-2">
             <span
               className="font-bold transition-colors text-[#529FE3]">
               Satipipal Contracting and Electrical W.L.L.
             </span>
             <span
-              className="text-xs font-semibold transition-colors text-[#FE9A22]">
+              className="text-2xs font-semibold transition-colors text-[#FE9A22]">
               ساتيبال للمقاولات والكهربائية ذ.م.م
             </span>
           </div>
         </div>
 
         <nav>
-          <ul className="flex items-center space-x-10 text-sm font-semibold mr-5">
+          <ul className="flex items-center space-x-10 text-xs font-semibold mr-5">
             {nav.map((item) => {
               const href =
                 item === "Home"
@@ -171,7 +163,7 @@ export function Header() {
         </p>
 
         {isHome && (
-          <button className="px-4 py-2 bg-[#FE9921] rounded-2xl mx-10">
+          <button onClick={() => router.push("/contact-us")} className="px-4 py-2 bg-[#FE9921] rounded-2xl mx-10 cursor-pointer">
             <span className="font-semibold text-white">Get in Touch</span>
           </button>
         )}

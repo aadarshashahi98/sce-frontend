@@ -1,6 +1,8 @@
+"use client"
 import { FaRecycle } from "react-icons/fa6"
 import { FiMonitor } from "react-icons/fi"
 import { MdAccessTimeFilled, MdDesignServices } from "react-icons/md"
+import { useRouter } from "next/navigation";
 
 export const sustainabilityList = [
     { icon: <FaRecycle />, name: "Sustainablility" },
@@ -10,6 +12,9 @@ export const sustainabilityList = [
 ]
 
 export function Sustainability() {
+
+    const router = useRouter()
+
     return (
         <section className="flex">
             <div className="sustainability-left bg-cover bg-center bg-no-repeat h-120">
@@ -18,7 +23,7 @@ export function Sustainability() {
                     <h2 className="text-3xl font-bold w-90">Committed To Keep People Healthy & Safe</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.</p>
                     <div>
-                        <button className="bg-[#FE9921] text-xl font-bold text-white px-4 py-2 rounded-2xl">Get in Touch</button>
+                        <button onClick={() => router.push("/contact-us")} className="bg-[#FE9921] text-xl font-bold text-white px-4 py-2 rounded-2xl cursor-pointer">Get in Touch</button>
                     </div>
                 </div>
                 

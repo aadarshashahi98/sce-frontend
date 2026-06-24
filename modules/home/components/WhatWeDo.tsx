@@ -1,6 +1,8 @@
+"use client"
 import { SlHome } from "react-icons/sl";
 import { HiOutlineOfficeBuilding } from "react-icons/hi"
 import { SiRenovate } from "react-icons/si";
+import { useRouter } from "next/navigation";
 
 export const services = [{
         icon: <SlHome />,
@@ -21,6 +23,9 @@ export const services = [{
 ]
 
 export function WhatWeDo() {
+
+    const router = useRouter()
+
     return (
         <section className="p-20 h-250 space-y-20 bg-[#EBEBEB]">
             <div className="flex flex-col justify-center items-center gap-5">
@@ -37,7 +42,7 @@ export function WhatWeDo() {
                             <i className="text-5xl font-extrabold">{item.icon}</i>
                             <h3 className="text-lg font-bold w-50">{item.title}</h3>
                             <p className="text-sm">{item.description}</p>
-                            <button className="bg-[#FE9A22] text-white py-1 px-2 rounded text-xs font-semibold">Read More</button>
+                            <button onClick={() => router.push("/services")} className="bg-[#FE9A22] text-white py-1 px-2 rounded text-xs font-semibold cursor-pointer">Read More</button>
                         </div>
                     </div>
                 ))}

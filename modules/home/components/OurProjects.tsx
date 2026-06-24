@@ -1,4 +1,6 @@
-import { FaArrowRightLong } from "react-icons/fa6";
+"use client"
+import { FaArrowRightLong } from "react-icons/fa6"
+import { useRouter } from "next/navigation"
 
 export const projectImages = [
     "/assets/heroimage.png",
@@ -15,6 +17,9 @@ const gridClasses = [
 ];
 
 export function OurProjects() {
+
+    const router = useRouter()
+
     return (
         <section className="bg-[#F5F5F5] p-10">
             <div className="flex justify-between items-end p-10">
@@ -24,7 +29,7 @@ export function OurProjects() {
                 </div>
                 <div className="space-y-3">
                     <p className="w-105 text-sm">From high-end homes to modern office spaces, each Brikly project is a reflection of quality, detail, and dedication.</p>
-                    <button className="flex items-center gap-3 text-xs font-semibold bg-[#FE9921] text-white p-1 px-3 rounded-3xl">
+                    <button onClick={() => router.push("/projects")} className="flex items-center gap-3 text-xs font-semibold bg-[#FE9921] text-white p-1 px-3 rounded-3xl cursor-pointer">
                         <span>View All</span>
                         <i><FaArrowRightLong /></i>
                     </button>

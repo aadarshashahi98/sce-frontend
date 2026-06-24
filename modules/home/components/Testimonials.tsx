@@ -30,7 +30,7 @@ export function Testimonials() {
             </div>
             <div className="flex gap-10">
                 {testimonials.map((item, index) =>
-                    <div key={index} className='bg-white p-10 rounded-3xl space-y-5'>
+                    <div key={index} className='bg-white p-10 rounded-3xl space-y-5 hover:shadow-2xl '>
                         <div>
                             <Rating defaultValue={item.rating} />
                         </div>
