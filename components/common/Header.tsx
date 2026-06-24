@@ -106,7 +106,7 @@ export function Header() {
         </div>
 
         <nav>
-          <ul className="flex items-center space-x-10 text-sm font-semibold">
+          <ul className="flex items-center space-x-10 text-sm font-semibold mr-5">
             {nav.map((item) => {
               const href =
                 item === "Home"
