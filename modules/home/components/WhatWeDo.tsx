@@ -37,7 +37,7 @@ export function WhatWeDo() {
                             <i className="text-5xl font-extrabold">{item.icon}</i>
                             <h3 className="text-lg font-bold w-50">{item.title}</h3>
                             <p className="text-sm">{item.description}</p>
-                            <button className="bg-[#5092F6] text-white py-1 px-2 rounded text-xs font-semibold">Read More</button>
+                            <button className="bg-[#FE9A22] text-white py-1 px-2 rounded text-xs font-semibold">Read More</button>
                         </div>
                     </div>
                 ))}
