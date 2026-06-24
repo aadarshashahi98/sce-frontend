@@ -1,6 +1,6 @@
 export function OurImpacts() {
     return (
-        <section className="absolute bg-white top-125">
+        <section className="absolute bg-white transform -translate-y-20">
             <div className="flex justify-between p-10 gap-25">
                 <div>
                     <h2 className="text-3xl font-bold">Our Impacts</h2>
