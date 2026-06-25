@@ -26,7 +26,7 @@ export function Impact() {
             </div>
             <div className="flex justify-between gap-10">
                 {impactList.map((item, index) =>
-                    <div key={index} className="bg-white flex flex-col items-center justify-center p-10 rounded-2xl w-80 space-y-5">
+                    <div key={index} className="bg-white flex flex-col items-center justify-center p-10 rounded-2xl w-80 space-y-5 hover:shadow-2xl transition-all duration-300">
                         <i className="text-5xl">{item.icon}</i>
                         <h3 className="text-xl font-bold">{item.title}</h3>
                         <p className="text-center text-sm">{item.description}</p>

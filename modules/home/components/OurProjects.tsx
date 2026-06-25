@@ -21,7 +21,7 @@ export function OurProjects() {
     const router = useRouter()
 
     return (
-        <section className="bg-[#F5F5F5] p-10">
+        <section className="bg-[#F5F5F5] p-10 w-full">
             <div className="flex justify-between items-end p-10">
                 <div>
                     <span>Our Projects</span>
@@ -29,23 +29,23 @@ export function OurProjects() {
                 </div>
                 <div className="space-y-3">
                     <p className="w-105 text-sm">From high-end homes to modern office spaces, each Brikly project is a reflection of quality, detail, and dedication.</p>
-                    <button onClick={() => router.push("/projects")} className="flex items-center gap-3 text-xs font-semibold bg-[#FE9921] text-white p-1 px-3 rounded-3xl cursor-pointer">
+                    <button onClick={() => router.push("/projects")} className="flex items-center gap-3 text-xs font-semibold bg-[#FE9921] text-white p-1 px-3 rounded-3xl cursor-pointer hover:bg-[#F5F5F5] hover:text-[#FE9921] border border-[#FE9921] transition-colors duration-300">
                         <span>View All</span>
                         <i><FaArrowRightLong /></i>
                     </button>
                 </div>
             </div>
-            <div className="grid-project-home">
-                <div className="w-190 h-80 rounded-3xl grid-1">
+            <div className="grid-project-home w-full">
+                <div className="w-full h-80 rounded-3xl grid-1">
                     <img className="w-full h-full object-cover rounded-3xl" src={projectImages[0]} alt="Project 1" />
                 </div>
-                <div className="w-100 h-80 rounded-3xl grid-2">
+                <div className="w-full h-80 rounded-3xl grid-2">
                     <img className="w-full h-full object-cover rounded-3xl" src={projectImages[1]} alt="Project 1" />
                 </div>
-                <div className="w-100 h-80 rounded-3xl grid-3">
+                <div className="w-full h-80 rounded-3xl grid-3">
                     <img className="w-full h-full object-cover rounded-3xl" src={projectImages[2]} alt="Project 1" />
                 </div>
-                <div className="w-190 h-80 rounded-3xl grid-4">
+                <div className="w-full h-80 rounded-3xl grid-4">
                     <img className="w-full h-full object-cover rounded-3xl" src={projectImages[3]} alt="Project 1" />
                 </div>
             </div>

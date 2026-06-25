@@ -16,19 +16,19 @@ export function Sustainability() {
     const router = useRouter()
 
     return (
-        <section className="flex">
-            <div className="sustainability-left bg-cover bg-center bg-no-repeat h-120">
+        <section className="flex w-full">
+            <div className="sustainability-left bg-cover bg-center bg-no-repeat h-120 w-[50%]">
                 <div className="bg-[#0E183E]/47 p-10 space-y-5 h-full flex flex-col justify-center text-white">
                     <h3 className="text-2xl font-semibold">Sustainability</h3>
                     <h2 className="text-3xl font-bold w-90">Committed To Keep People Healthy & Safe</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.</p>
                     <div>
-                        <button onClick={() => router.push("/contact-us")} className="bg-[#FE9921] text-xl font-bold text-white px-4 py-2 rounded-2xl cursor-pointer">Get in Touch</button>
+                        <button onClick={() => router.push("/contact-us")} className="bg-[#FE9921] text-xl font-bold text-white px-4 py-2 rounded-2xl cursor-pointer border-2 border-[#FE9921] hover:bg-transparent hover:border-white transition-colors duration-300 ">Get in Touch</button>
                     </div>
                 </div>
                 
             </div>
-            <div className="sustainability-right bg-cover bg-center bg-no-repeat h-120">
+            <div className="sustainability-right bg-cover bg-center bg-no-repeat h-120 w-[50%]">
                 <div className="bg-[#FDC95E]/85 space-y-5 p-10 h-full flex flex-col justify-center">
                     <h3 className="text-2xl font-semibold">We Follow Best Practices</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.</p>

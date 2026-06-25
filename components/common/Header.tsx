@@ -163,8 +163,8 @@ export function Header() {
         </p>
 
         {isHome && (
-          <button onClick={() => router.push("/contact-us")} className="px-4 py-2 bg-[#FE9921] rounded-2xl mx-10 cursor-pointer">
-            <span className="font-semibold text-white">Get in Touch</span>
+          <button onClick={() => router.push("/contact-us")} className="px-4 py-2 bg-[#FE9921] border-2 border-[#FE9921] hover:bg-transparent hover:border-white transition-all duration-300 rounded-2xl mx-10 cursor-pointer">
+            <span className="font-semibold text-white transition-colors duration-300">Get in Touch</span>
           </button>
         )}
       </div>

@@ -35,8 +35,8 @@ export function TrustTheExperience() {
             </div>
             <div className="grid grid-cols-3 mx-10 gap-10">
                 {serviceList.map((item, index) => 
-                    <div key={index} className="rounded-3xl bg-white">
-                        <div className="w-85 h-50 rounded-t-3xl">
+                    <div key={index} className="rounded-3xl bg-white hover:shadow-2xl transition-all duration-300">
+                        <div className="w-85.3 h-50 rounded-t-3xl">
                             <img className="w-full h-full object-cover rounded-t-3xl" src={item.image} alt={item.title} />
                         </div>
                         <div className="p-5 space-y-3">

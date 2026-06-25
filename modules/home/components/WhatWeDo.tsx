@@ -42,7 +42,7 @@ export function WhatWeDo() {
                             <i className="text-5xl font-extrabold">{item.icon}</i>
                             <h3 className="text-lg font-bold w-50">{item.title}</h3>
                             <p className="text-sm">{item.description}</p>
-                            <button onClick={() => router.push("/services")} className="bg-[#FE9A22] text-white py-1 px-2 rounded text-xs font-semibold cursor-pointer">Read More</button>
+                            <button onClick={() => router.push("/services")} className="bg-[#FE9A22] text-white py-1 px-2 rounded text-xs font-semibold cursor-pointer hover:bg-white border border-[#FE9A22] hover:text-[#FE9A22] transition-all duration-300">Read More</button>
                         </div>
                     </div>
                 ))}

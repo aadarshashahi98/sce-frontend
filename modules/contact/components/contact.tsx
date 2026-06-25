@@ -39,7 +39,7 @@ export function Contact() {
         <section className="bg-[#F5F5F5] p-20 flex justify-center space-x-20 items-center">
             <div className="space-y-5">
                 {contactInfo.map((item, index) =>
-                    <div key={index} className="space-y-3 bg-white p-5 w-100 shadow-xl">
+                    <div key={index} className="space-y-3 bg-white p-5 w-100 shadow-xl hover:shadow-2xl transition-all duration-300">
                         <h3 className="text-lg font-semibold">{item.title}</h3>
                         <div className="flex items-center gap-4">
                             <i className="text-2xl">{item.icon}</i>
@@ -56,14 +56,14 @@ export function Contact() {
                     </div>
                     { contactForm.map((item, index) =>
                         <div key={index}>
-                            <input className="px-4 py-2 border border-[#989898] rounded-lg w-100" type={item.type} name={item.name} placeholder={item.placeholder} />
+                            <input className="px-4 py-2 border border-[#989898] rounded-lg w-100 focus:outline-none" type={item.type} name={item.name} placeholder={item.placeholder} />
                         </div>
                     )}
                     <div>
-                        <textarea className="px-4 py-2 border border-[#989898] rounded-lg w-100 h-25" name="message" placeholder="Write your message here"></textarea>
+                        <textarea className="px-4 py-2 border border-[#989898] rounded-lg w-100 h-25 focus:outline-none" name="message" placeholder="Write your message here"></textarea>
                     </div>
                     <div>
-                        <button className="bg-[#FE9921] px-4 py-2 rounded-lg w-30" type="submit"><span className="font-semibold text-white">Submit</span></button>
+                        <button className="bg-[#FE9921] px-4 py-2 rounded-lg w-30 hover:shadow-2xl transition-all duration-300 hover:bg-[#ffaf4d]" type="submit"><span className="font-semibold text-white">Submit</span></button>
                     </div>
                 </form>
             </div>

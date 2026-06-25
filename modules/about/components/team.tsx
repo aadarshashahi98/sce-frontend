@@ -31,7 +31,7 @@ export function Team() {
             </div>
             <div className="flex gap-10">
                 {teamList.map((item, index) =>
-                    <div key={index}>
+                    <div key={index} className="group rounded-b-2xl hover:shadow-2xl transition-all duration-300">
                         <div className="w-60 h-65 rounded-t-2xl">
                             <img className="h-full w-full object-cover rounded-t-2xl" src={item.image} alt={item.alt} />
                         </div>

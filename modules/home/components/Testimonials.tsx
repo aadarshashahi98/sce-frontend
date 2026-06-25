@@ -23,14 +23,14 @@ export const testimonials = [{
 
 export function Testimonials() {
     return (
-        <section className="bg-[#F5F5F5] p-20 space-y-20">
-            <div className="flex flex-col items-center space-y-5">
+        <section className="bg-[#F5F5F5] p-20 space-y-20 w-full">
+            <div className="flex flex-col items-center space-y-5 w-full">
                 <span>Testimonials</span>
                 <h2 className="text-3xl font-bold">What our Clients Say</h2>
             </div>
-            <div className="flex gap-10">
+            <div className="flex gap-10 w-full">
                 {testimonials.map((item, index) =>
-                    <div key={index} className='bg-white p-10 rounded-3xl space-y-5 hover:shadow-2xl '>
+                    <div key={index} className='bg-white p-10 rounded-3xl space-y-5 hover:shadow-2xl transition-all duration-300 w-[35%]'>
                         <div>
                             <Rating defaultValue={item.rating} />
                         </div>

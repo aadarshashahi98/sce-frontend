@@ -44,13 +44,13 @@ export function BuiltToLast() {
             <div>
                 <ul className="flex gap-5 justify-center items-center">
                     {["All", "Completed", "Ongoing", "Upcoming"].map((item, index) =>
-                        <li key={index} className="text-center px-4 py-2 bg-white rounded-lg">{item}</li>
+                        <li key={index} className="text-center px-4 py-2 bg-white rounded-lg hover:bg-[#868686] hover:text-[#e8e8e8] transition-colors duration-300">{item}</li>
                     )}
                 </ul>
             </div>
             <div className="grid grid-cols-2 gap-10">
                 {projectsList.map((item, index) =>
-                    <div key={index}>
+                    <div key={index} className="hover:shadow-2xl transition-all duration-300">
                         <div className="w-133 h-70">
                             <img className="w-full h-full object-cover" src={item.image} alt={item.title} />
                         </div>
