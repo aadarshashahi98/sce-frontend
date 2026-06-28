@@ -199,7 +199,7 @@ export function Header() {
       {/* Right Drawer */}
       <div
         className={`
-          fixed top-0 right-0 z-50 h-full w-72 bg-[#0B1F4F] lg:hidden
+          fixed top-0 right-0 z-50 h-full w-72 bg-[#0F172A] lg:hidden
           flex flex-col
           transition-transform duration-300 ease-in-out
           ${menuOpen ? "translate-x-0" : "translate-x-full"}
