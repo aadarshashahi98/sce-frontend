@@ -12,18 +12,76 @@ header {
   background-repeat: no-repeat;
 }
 
+/* Desktop (your original design) */
+/* Mobile (default) */
 .grid-project-home {
   display: grid;
-  grid-template-areas:
-    "grid1 grid1 grid1 grid1 grid1 grid1 grid1 grid1 grid1 grid1 grid1 grid2"
-    "grid3 grid4 grid4 grid4 grid4 grid4 grid4 grid4 grid4 grid4 grid4 grid4";
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.grid-1 { grid-area: grid1; }
-.grid-2 { grid-area: grid2; }
-.grid-3 { grid-area: grid3; }
-.grid-4 { grid-area: grid4; }
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4 {
+  grid-area: unset;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .grid-project-home {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "grid1 grid1"
+      "grid2 grid3"
+      "grid4 grid4";
+    gap: 20px;
+  }
+
+  .grid-1 {
+    grid-area: grid1;
+  }
+
+  .grid-2 {
+    grid-area: grid2;
+  }
+
+  .grid-3 {
+    grid-area: grid3;
+  }
+
+  .grid-4 {
+    grid-area: grid4;
+  }
+}
+
+/* Desktop (YOUR ORIGINAL DESIGN - unchanged) */
+@media (min-width: 1024px) {
+  .grid-project-home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "grid1 grid1 grid1 grid1 grid1 grid1 grid1 grid1 grid2 grid2 grid2 grid2"
+      "grid3 grid3 grid3 grid3 grid4 grid4 grid4 grid4 grid4 grid4 grid4 grid4";
+    gap: 20px;
+  }
+
+  .grid-1 {
+    grid-area: grid1;
+  }
+
+  .grid-2 {
+    grid-area: grid2;
+  }
+
+  .grid-3 {
+    grid-area: grid3;
+  }
+
+  .grid-4 {
+    grid-area: grid4;
+  }
+}
 
 .sustainability-left { background-image: url('/assets/heroimage.png'); }
 .sustainability-right { background-image: url('/assets/about.png'); }

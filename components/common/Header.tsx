@@ -31,144 +31,237 @@ const headerContent: Record<
   "/projects": {
     title: "Our Projects",
     subtitle:
-      "Explore a showcase of the spaces we’ve proudly built — and a preview of what’s coming next. Every build tells a story of trust, quality, and purpose.",
+      "Explore a showcase of the spaces we've proudly built — and a preview of what's coming next. Every build tells a story of trust, quality, and purpose.",
     align: "items-start",
     text: "text-left",
   },
   "/contact-us": {
     title: "Contact Us",
     subtitle:
-      "Explore a showcase of the spaces we’ve proudly built — and a preview of what’s coming next. Every build tells a story of trust, quality, and purpose.",
+      "Explore a showcase of the spaces we've proudly built — and a preview of what's coming next. Every build tells a story of trust, quality, and purpose.",
     align: "items-start",
     text: "text-left",
   },
-}
+};
 
-export const nav = ["Home", "About Us", "Services", "Projects", "Contact Us"]
+export const nav = ["Home", "About Us", "Services", "Projects", "Contact Us"];
 
 export function Header() {
-  const pathname = usePathname()
-  const router = useRouter()
-  const content = headerContent[pathname] ?? headerContent["/"]
-  const isHome = pathname === "/"
+  const pathname = usePathname();
+  const router = useRouter();
+  const content = headerContent[pathname] ?? headerContent["/"];
+  const isHome = pathname === "/";
 
   const headerHeight = isHome ? "h-[90vh]" : "h-[80vh]";
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-    }
-    handleScroll()
+    };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
     }
-  }, [])
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <header className={`relative w-full ${headerHeight}`}>
-      <div className="absolute inset-0 bg-linear-to-b from-[#0B1F4F] from-0% via-[#0B1F4F]/75 via-19% to-[#0B1F4F]/75 to-100%" />
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F4F] from-0% via-[#0B1F4F]/75 via-19% to-[#0B1F4F]/75 to-100%" />
 
+      {/* Navbar */}
       <div
         className={`
           fixed top-0 left-0 w-full z-50
-          flex justify-between items-center px-5 py-1
           transition-all duration-300
           ${scrolled ? "bg-[#F5F5F5] shadow-md" : "bg-transparent"}
         `}
       >
-
-        <div className="flex items-center">
-          <div className="w-15 h-15">
-            <img
-              src="/assets/seclogo.png"
-              alt="Logo"
-              className="w-full h-full object-cover"
-            />
+        <div className="flex justify-between items-center px-4 sm:px-6 py-2">
+          {/* Logo */}
+          <div className="flex items-center min-w-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+              <img
+                src="/assets/seclogo.png"
+                alt="Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex flex-col ml-2 min-w-0">
+              <span className="font-bold text-[10px] sm:text-xs text-[#529FE3] leading-tight truncate max-w-[160px] sm:max-w-none">
+                Satipipal Contracting and Electrical W.L.L.
+              </span>
+              <span className="font-semibold text-[9px] sm:text-[10px] text-[#FE9A22] leading-tight truncate max-w-[160px] sm:max-w-none">
+                ساتيبال للمقاولات والكهربائية ذ.م.م
+              </span>
+            </div>
           </div>
 
-          <div className="flex flex-col text-xs ml-2">
-            <span
-              className="font-bold transition-colors text-[#529FE3]">
-              Satipipal Contracting and Electrical W.L.L.
-            </span>
-            <span
-              className="text-2xs font-semibold transition-colors text-[#FE9A22]">
-              ساتيبال للمقاولات والكهربائية ذ.م.م
-            </span>
-          </div>
-        </div>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:block">
+            <ul className="flex items-center space-x-8 xl:space-x-10 text-xs font-semibold mr-4">
+              {nav.map((item) => {
+                const href =
+                  item === "Home"
+                    ? "/"
+                    : `/${item.toLowerCase().replace(" ", "-")}`;
+                const isActive = pathname === href;
 
-        <nav>
-          <ul className="flex items-center space-x-10 text-xs font-semibold mr-5">
-            {nav.map((item) => {
-              const href =
-                item === "Home"
-                  ? "/"
-                  : `/${item.toLowerCase().replace(" ", "-")}`
-
-              const isActive = pathname === href
-
-              return (
-                <li key={item}>
+                return (
+                  <li key={item}>
                     <a
-                    href={href}
-                    className={`
+                      href={href}
+                      className={`
                         relative group transition-colors duration-200
-
                         ${
-                        isActive
+                          isActive
                             ? "text-[#FE9921]"
                             : scrolled
                             ? "text-black"
                             : "text-white"
                         }
-
                         hover:text-[#FE9921]
-                    `}
+                      `}
                     >
-                    {item}
-
-                    {/* underline */}
-                    <span
+                      {item}
+                      <span
                         className={`
-                        absolute left-0 -bottom-1 h-0.5 bg-[#FE9921]
-                        w-full origin-left transition-transform duration-300
-
-                        ${
-                            isActive
-                            ? "scale-x-100"
-                            : "scale-x-0 group-hover:scale-x-100"
-                        }
+                          absolute left-0 -bottom-1 h-0.5 bg-[#FE9921]
+                          w-full origin-left transition-transform duration-300
+                          ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}
                         `}
-                    />
+                      />
                     </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          {/* Hamburger Button (mobile/tablet) */}
+          <button
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            className={`
+              lg:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5
+              rounded-md transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FE9921]
+              ${scrolled ? "text-black" : "text-white"}
+            `}
+          >
+            <span
+              className={`block w-5 h-0.5 rounded-full transition-all duration-300 origin-center bg-current
+                ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block w-5 h-0.5 rounded-full transition-all duration-300 bg-current
+                ${menuOpen ? "opacity-0 scale-x-0" : ""}`}
+            />
+            <span
+              className={`block w-5 h-0.5 rounded-full transition-all duration-300 origin-center bg-current
+                ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        <div
+          className={`
+            lg:hidden overflow-hidden transition-all duration-300 ease-in-out
+            ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+            ${scrolled ? "bg-[#F5F5F5]" : "bg-[#0B1F4F]/95"}
+          `}
+        >
+          <ul className="flex flex-col px-6 pb-4 pt-1 space-y-1">
+            {nav.map((item) => {
+              const href =
+                item === "Home"
+                  ? "/"
+                  : `/${item.toLowerCase().replace(" ", "-")}`;
+              const isActive = pathname === href;
+
+              return (
+                <li key={item}>
+                  <a
+                    href={href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`
+                      block py-2.5 px-2 text-sm font-semibold rounded-md
+                      transition-colors duration-200 border-b
+                      ${scrolled ? "border-gray-200" : "border-white/10"}
+                      ${
+                        isActive
+                          ? "text-[#FE9921]"
+                          : scrolled
+                          ? "text-black hover:text-[#FE9921]"
+                          : "text-white hover:text-[#FE9921]"
+                      }
+                    `}
+                  >
+                    {item}
+                  </a>
                 </li>
-              )
+              );
             })}
           </ul>
-        </nav>
+        </div>
       </div>
 
+      {/* Hero Content */}
       <div
-        className={`relative z-10 w-full h-full flex flex-col justify-center space-y-5 ${
-          content.text
-        } ${content.align}`}
+        className={`relative z-10 w-full h-full flex flex-col justify-center space-y-4 sm:space-y-5 px-6 sm:px-10 ${content.text} ${content.align}`}
       >
-        <h1 className="text-3xl font-extrabold text-[#dfdddd] mx-10 w-100">
+        <h1
+          className={`
+            text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#dfdddd]
+            w-full sm:w-80 md:w-100
+            ${isHome ? "sm:ml-0" : ""}
+          `}
+        >
           {content.title}
         </h1>
-        <p className="text-lg text-[#dfdddd] mx-10 w-200">
+        <p
+          className={`
+            text-base sm:text-lg text-[#dfdddd]
+            w-full sm:w-full md:w-160 lg:w-200
+          `}
+        >
           {content.subtitle}
         </p>
 
         {isHome && (
-          <button onClick={() => router.push("/contact-us")} className="px-4 py-2 bg-[#FE9921] hover:bg-white hover:text-[#FE9921] rounded-2xl mx-10 cursor-pointer">
-            <span className="font-semibold text-white">Get in Touch</span>
-          </button>
+          <div>
+            <button
+              onClick={() => router.push("/contact-us")}
+              className="px-5 py-2.5 bg-[#FE9921] hover:bg-white hover:text-[#FE9921] rounded-2xl cursor-pointer transition-colors duration-200 group"
+            >
+              <span className="font-semibold text-white group-hover:text-[#FE9921] transition-colors duration-200">
+                Get in Touch
+              </span>
+            </button>
+          </div>
         )}
       </div>
     </header>
-  )
+  );
 }
