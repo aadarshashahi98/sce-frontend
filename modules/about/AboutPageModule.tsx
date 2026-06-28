@@ -1,4 +1,4 @@
-import { TrustedPartners } from "../home/components/TrustedPartners";
+import { TrustedPartners } from "../../components/common/TrustedPartners";
 import { About } from "./components/about";
 import { BuildYourDream } from "./components/buildYourDeram";
 import { Impact } from "./components/impact";

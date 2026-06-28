@@ -19,7 +19,7 @@ export const teamList = [
         alt: "Team 4",
         name: "Maria Jay",
         title: "Head Engineer (AU)"
-    }
+    },
 ]
 
 export function Team() {

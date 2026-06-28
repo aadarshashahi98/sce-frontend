@@ -3,7 +3,7 @@ import { OurImpacts } from "./components/OurImpacts";
 import { OurProjects } from "./components/OurProjects";
 import { Sustainability } from "./components/Sustainability";
 import { Testimonials } from "./components/Testimonials";
-import { TrustedPartners } from "./components/TrustedPartners";
+import { TrustedPartners } from "../../components/common/TrustedPartners";
 import { WhatWeDo } from "./components/WhatWeDo";
 
 export function HomePageModule() {

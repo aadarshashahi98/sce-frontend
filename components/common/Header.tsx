@@ -52,6 +52,7 @@ export function Header() {
   const content = headerContent[pathname] ?? headerContent["/"]
   const isHome = pathname === "/"
 
+  const headerHeight = isHome ? "h-[90vh]" : "h-[80vh]";
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -66,8 +67,8 @@ export function Header() {
   }, [])
 
   return (
-    <header className="relative w-full h-screen">
-      <div className="absolute inset-0 bg-linear-to-b from-[#0B1F4F] from-0% via-[#0B1F4F]/56 via-19% to-[#0B1F4F]/56 to-100%" />
+    <header className={`relative w-full ${headerHeight}`}>
+      <div className="absolute inset-0 bg-linear-to-b from-[#0B1F4F] from-0% via-[#0B1F4F]/75 via-19% to-[#0B1F4F]/75 to-100%" />
 
       <div
         className={`
@@ -163,8 +164,8 @@ export function Header() {
         </p>
 
         {isHome && (
-          <button onClick={() => router.push("/contact-us")} className="px-4 py-2 bg-[#FE9921] border-2 border-[#FE9921] hover:bg-transparent hover:border-white transition-all duration-300 rounded-2xl mx-10 cursor-pointer">
-            <span className="font-semibold text-white transition-colors duration-300">Get in Touch</span>
+          <button onClick={() => router.push("/contact-us")} className="px-4 py-2 bg-[#FE9921] hover:bg-white hover:text-[#FE9921] rounded-2xl mx-10 cursor-pointer">
+            <span className="font-semibold text-white">Get in Touch</span>
           </button>
         )}
       </div>

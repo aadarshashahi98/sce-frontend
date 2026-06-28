@@ -55,13 +55,13 @@ export function BuiltToLast() {
                             <img className="w-full h-full object-cover" src={item.image} alt={item.title} />
                         </div>
                         <div className="border-x border-b border-[#cecece] p-10 space-y-5">
-                            <h3 className="text-2xl font-semibold">{item.title}</h3>
-                            <p className="text-sm">{item.description}</p>
+                            <h3 className="text-xl font-semibold">{item.title}</h3>
+                            <p className="text-xs">{item.description}</p>
                             <div>
-                                <span className="text-xl font-semibold">Highlights</span>
+                                <span className="text-lg font-semibold">Highlights</span>
                                 <ul className="space-y-2 ml-5 mt-5">
                                     {item.highlights.map((itemH, indexH) =>
-                                        <li key={indexH} className="flex gap-2 items-center">
+                                        <li key={indexH} className="flex gap-2 items-center text-xs">
                                             <i><FaCircleCheck /></i>
                                             <span>{itemH}</span>
                                         </li>
@@ -69,7 +69,7 @@ export function BuiltToLast() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="border border-t-0 border-[#cecece] px-4 py-2">
+                        <div className="border border-t-0 border-[#cecece] px-4 py-2 text-xs">
                             <span>Type: {item.type}</span>
                         </div>
                     </div>
