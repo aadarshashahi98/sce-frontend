@@ -33,7 +33,7 @@ function Counter({
 
 export function OurImpacts() {
   return (
-    <section className="absolute bg-white transform -translate-y-20 rounded-2xl shadow-lg">
+    <section className="absolute bg-white transform -translate-y-20 rounded-r-2xl shadow-lg">
       <div className="flex justify-between p-10 gap-25">
         <div>
           <h2 className="text-3xl font-bold">Our Impacts</h2>
