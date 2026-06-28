@@ -36,25 +36,25 @@ export const projectsList = [
 
 export function BuiltToLast() {
     return (
-        <section className="bg-[#F5F5F5] p-20 space-y-10">
+        <section className="bg-[#F5F5F5] px-6 py-12 md:p-20 space-y-10">
             <div className="flex flex-col justify-center items-center space-y-5">
                 <span>Built to Last</span>
-                <h2 className="text-3xl font-bold text-center w-100">Where Ideas Become Landmarks</h2>
+                <h2 className="text-3xl font-bold text-center w-full md:w-100">Where Ideas Become Landmarks</h2>
             </div>
             <div>
-                <ul className="flex gap-5 justify-center items-center">
+                <ul className="flex flex-wrap gap-3 md:gap-5 justify-center items-center">
                     {["All", "Completed", "Ongoing", "Upcoming"].map((item, index) =>
                         <li key={index} className="text-center px-4 py-2 bg-white rounded-lg hover:bg-[#868686] hover:text-[#e8e8e8] transition-colors duration-300">{item}</li>
                     )}
                 </ul>
             </div>
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {projectsList.map((item, index) =>
                     <div key={index} className="hover:shadow-2xl transition-all duration-300">
-                        <div className="w-133 h-70">
+                        <div className="w-full h-70">
                             <img className="w-full h-full object-cover" src={item.image} alt={item.title} />
                         </div>
-                        <div className="border-x border-b border-[#cecece] p-10 space-y-5">
+                        <div className="border-x border-b border-[#cecece] p-6 md:p-10 space-y-5">
                             <h3 className="text-xl font-semibold">{item.title}</h3>
                             <p className="text-xs">{item.description}</p>
                             <div>

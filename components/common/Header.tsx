@@ -52,7 +52,10 @@ export function Header() {
   const content = headerContent[pathname] ?? headerContent["/"];
   const isHome = pathname === "/";
 
-  const headerHeight = isHome ? "h-[90vh]" : "h-[80vh]";
+  const headerHeight = isHome
+    ? "h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]"
+    : "h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[80vh]";
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -67,12 +70,10 @@ export function Header() {
     };
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -158,7 +159,7 @@ export function Header() {
             </ul>
           </nav>
 
-          {/* Hamburger Button (mobile/tablet) */}
+          {/* Hamburger Button */}
           <button
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -183,48 +184,67 @@ export function Header() {
             />
           </button>
         </div>
+      </div>
 
-        {/* Mobile Dropdown Menu */}
-        <div
-          className={`
-            lg:hidden overflow-hidden transition-all duration-300 ease-in-out
-            ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
-            ${scrolled ? "bg-[#F5F5F5]" : "bg-[#0B1F4F]/95"}
-          `}
-        >
-          <ul className="flex flex-col px-6 pb-4 pt-1 space-y-1">
-            {nav.map((item) => {
-              const href =
-                item === "Home"
-                  ? "/"
-                  : `/${item.toLowerCase().replace(" ", "-")}`;
-              const isActive = pathname === href;
+      {/* Backdrop */}
+      <div
+        onClick={() => setMenuOpen(false)}
+        className={`
+          fixed inset-0 z-40 bg-black/50 lg:hidden
+          transition-opacity duration-300
+          ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+        `}
+      />
 
-              return (
-                <li key={item}>
-                  <a
-                    href={href}
-                    onClick={() => setMenuOpen(false)}
-                    className={`
-                      block py-2.5 px-2 text-sm font-semibold rounded-md
-                      transition-colors duration-200 border-b
-                      ${scrolled ? "border-gray-200" : "border-white/10"}
-                      ${
-                        isActive
-                          ? "text-[#FE9921]"
-                          : scrolled
-                          ? "text-black hover:text-[#FE9921]"
-                          : "text-white hover:text-[#FE9921]"
-                      }
-                    `}
-                  >
-                    {item}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+      {/* Right Drawer */}
+      <div
+        className={`
+          fixed top-0 right-0 z-50 h-full w-72 bg-[#0B1F4F] lg:hidden
+          flex flex-col
+          transition-transform duration-300 ease-in-out
+          ${menuOpen ? "translate-x-0" : "translate-x-full"}
+        `}
+      >
+        {/* Drawer Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
+          <span className="text-white font-bold text-sm">Menu</span>
+          <button
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+            className="text-white hover:text-[#FE9921] transition-colors duration-200 focus:outline-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
+
+        {/* Drawer Nav Links */}
+        <ul className="flex flex-col px-6 pt-4 space-y-1">
+          {nav.map((item) => {
+            const href =
+              item === "Home"
+                ? "/"
+                : `/${item.toLowerCase().replace(" ", "-")}`;
+            const isActive = pathname === href;
+
+            return (
+              <li key={item}>
+                <a
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className={`
+                    block py-3 px-2 text-sm font-semibold rounded-md
+                    transition-colors duration-200 border-b border-white/10
+                    ${isActive ? "text-[#FE9921]" : "text-white hover:text-[#FE9921]"}
+                  `}
+                >
+                  {item}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
 
       {/* Hero Content */}

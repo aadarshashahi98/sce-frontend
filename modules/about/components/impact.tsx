@@ -19,12 +19,12 @@ export const impactList = [{
 
 export function Impact() {
     return(
-        <section className="bg-[#EBEBEB] p-20 flex flex-col items-center space-y-15">
+        <section className="bg-[#EBEBEB] px-6 py-12 md:p-20 flex flex-col items-center space-y-15">
             <div className="flex flex-col items-center space-y-5">
                 <span>Impactful</span>
                 <h2 className="text-3xl font-bold">Vision, Mission & Values</h2>
             </div>
-            <div className="flex justify-between gap-10">
+            <div className="flex flex-wrap justify-center gap-10 w-full">
                 {impactList.map((item, index) =>
                     <div key={index} className="bg-white flex flex-col items-center justify-center p-10 rounded-2xl w-80 space-y-5 hover:shadow-2xl transition-all duration-300">
                         <i className="text-5xl">{item.icon}</i>

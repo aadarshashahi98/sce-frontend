@@ -24,12 +24,12 @@ export const teamList = [
 
 export function Team() {
     return (
-        <section className="bg-[#F5F5F5] p-20 flex flex-col justify-center items-center space-y-20">
+        <section className="bg-[#F5F5F5] px-6 py-12 md:p-20 flex flex-col justify-center items-center space-y-10 md:space-y-20">
             <div className="flex flex-col justify-center items-center space-y-5">
                 <span>The Team</span>
                 <h2 className="text-3xl font-bold">Our Experts</h2>
             </div>
-            <div className="flex gap-10">
+            <div className="flex flex-wrap justify-center gap-10">
                 {teamList.map((item, index) =>
                     <div key={index} className="group rounded-b-2xl hover:shadow-2xl transition-all duration-300">
                         <div className="w-60 h-65 rounded-t-2xl">

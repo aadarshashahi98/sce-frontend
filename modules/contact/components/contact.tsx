@@ -36,10 +36,10 @@ const contactForm = [
 
 export function Contact() {
     return (
-        <section className="bg-[#F5F5F5] p-20 flex justify-center space-x-20 items-center">
-            <div className="space-y-5">
+        <section className="bg-[#F5F5F5] px-6 py-12 md:p-20 flex flex-col lg:flex-row justify-center gap-10 lg:space-x-20 items-center">
+            <div className="space-y-5 w-full lg:w-auto">
                 {contactInfo.map((item, index) =>
-                    <div key={index} className="space-y-3 bg-white p-5 w-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div key={index} className="space-y-3 bg-white p-5 w-full lg:w-100 shadow-xl hover:shadow-2xl transition-all duration-300">
                         <h3 className="text-lg font-semibold">{item.title}</h3>
                         <div className="flex items-center gap-4">
                             <i className="text-2xl">{item.icon}</i>
@@ -48,19 +48,19 @@ export function Contact() {
                     </div>
                 )}
             </div>
-            <div>
-                <form className="space-y-5 shadow-xl p-10" action="https://formspree.io/f/xpqgqqnw" method="post">
+            <div className="w-full lg:w-auto">
+                <form className="space-y-5 shadow-xl p-6 md:p-10 w-full" action="https://formspree.io/f/xpqgqqnw" method="post">
                     <div>
                         <span>Get In Touch</span>
                         <h2 className="text-2xl font-bold">Any Question?<br/>Write Down And Send Us</h2>
                     </div>
-                    { contactForm.map((item, index) =>
+                    {contactForm.map((item, index) =>
                         <div key={index}>
-                            <input className="px-4 py-2 border border-[#989898] rounded-lg w-100 focus:outline-none" type={item.type} name={item.name} placeholder={item.placeholder} />
+                            <input className="px-4 py-2 border border-[#989898] rounded-lg w-full focus:outline-none" type={item.type} name={item.name} placeholder={item.placeholder} />
                         </div>
                     )}
                     <div>
-                        <textarea className="px-4 py-2 border border-[#989898] rounded-lg w-100 h-25 focus:outline-none" name="message" placeholder="Write your message here"></textarea>
+                        <textarea className="px-4 py-2 border border-[#989898] rounded-lg w-full h-25 focus:outline-none" name="message" placeholder="Write your message here"></textarea>
                     </div>
                     <div>
                         <button className="bg-[#FE9921] px-4 py-2 rounded-lg w-30 hover:shadow-2xl transition-all duration-300 hover:bg-[#ffaf4d]" type="submit"><span className="font-semibold text-white">Submit</span></button>
