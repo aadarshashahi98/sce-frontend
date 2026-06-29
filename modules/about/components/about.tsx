@@ -6,7 +6,7 @@ export function About() {
     return (
         <section className="bg-[#F5F5F5] flex flex-col lg:flex-row justify-center items-center lg:space-x-20 gap-10 lg:gap-0 px-6 py-12 sm:px-10 sm:py-16 lg:p-20">
             {/* Image */}
-            <div className="w-full max-w-sm sm:max-w-md lg:w-120 h-72 sm:h-96 lg:h-150 rounded-4xl flex-shrink-0">
+            <div className="w-full max-w-sm sm:max-w-md lg:w-120 h-72 sm:h-96 lg:h-150 rounded-4xl shrink-0">
                 <img
                     className="h-full w-full object-cover rounded-4xl"
                     src="/assets/about.png"

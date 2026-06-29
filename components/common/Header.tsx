@@ -88,7 +88,7 @@ export function Header() {
   return (
     <header className={`relative w-full ${headerHeight}`}>
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0B1F4F] from-0% via-[#0B1F4F]/75 via-19% to-[#0B1F4F]/75 to-100%" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0B1F4F] from-0% via-[#0B1F4F]/75 via-19% to-[#0B1F4F]/75 to-100%" />
 
       {/* Navbar */}
       <div
@@ -101,7 +101,7 @@ export function Header() {
         <div className="flex justify-between items-center px-4 sm:px-6 py-2">
           {/* Logo */}
           <div className="flex items-center min-w-0">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0">
               <img
                 src="/assets/seclogo.png"
                 alt="Logo"
@@ -109,10 +109,10 @@ export function Header() {
               />
             </div>
             <div className="flex flex-col ml-2 min-w-0">
-              <span className="font-bold text-[10px] sm:text-xs text-[#529FE3] leading-tight truncate max-w-[160px] sm:max-w-none">
+              <span className="font-bold text-[10px] sm:text-xs text-[#529FE3] leading-tight truncate max-w-40 sm:max-w-none">
                 Satipipal Contracting and Electrical W.L.L.
               </span>
-              <span className="font-semibold text-[9px] sm:text-[10px] text-[#FE9A22] leading-tight truncate max-w-[160px] sm:max-w-none">
+              <span className="font-semibold text-[9px] sm:text-[10px] text-[#FE9A22] leading-tight truncate max-w-40 sm:max-w-none">
                 ساتيبال للمقاولات والكهربائية ذ.م.م
               </span>
             </div>
