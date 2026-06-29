@@ -29,7 +29,7 @@ export function About() {
                 <ul className="space-y-3">
                     {aboutList.map((item, index) => (
                         <li key={index} className="flex gap-3 items-center">
-                            <i className="text-green-500 flex-shrink-0">
+                            <i className="text-500 shrink-0">
                                 <FaCircleCheck />
                             </i>
                             <span className="text-gray-700">{item}</span>
