@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "SCE Frontend",
+  title: "Satipipal Contracting and Electrical W.L.L",
   description: "Frontend for SCE",
+  icons: {
+    icon: 'favicon.ico'
+  }
 }
 
 export default function RootLayout({
