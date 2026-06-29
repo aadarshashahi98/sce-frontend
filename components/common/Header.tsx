@@ -273,9 +273,9 @@ export function Header() {
           <div>
             <button
               onClick={() => router.push("/contact-us")}
-              className="px-5 py-2.5 bg-[#FE9921] hover:bg-white hover:text-[#FE9921] rounded-2xl cursor-pointer transition-colors duration-200 group"
+              className="px-5 py-2.5 bg-[#FE9921] border-2 border-[#FE9921] hover:bg-transparent hover:text-[#FE9921] rounded-2xl cursor-pointer transition-colors duration-200 group"
             >
-              <span className="font-semibold text-white border-2 border-[#FE9921] group-hover:text-[#FE9921] group-hover:bg-transparent transition-colors duration-200">
+              <span className="font-semibold text-white group-hover:text-[#FE9921] transition-colors duration-200">
                 Get in Touch
               </span>
             </button>
