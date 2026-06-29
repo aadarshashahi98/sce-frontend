@@ -51,7 +51,7 @@ export function Contact() {
             <div className="w-full lg:w-auto">
                 <form className="space-y-5 shadow-xl p-6 md:p-10 w-full" action="https://formspree.io/f/xpqgqqnw" method="post">
                     <div>
-                        <span>Get In Touch</span>
+                        <span className="text-[#FE9921] font-semibold uppercase">Get In Touch</span>
                         <h2 className="text-2xl font-bold">Any Question?<br/>Write Down And Send Us</h2>
                     </div>
                     {contactForm.map((item, index) =>

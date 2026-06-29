@@ -21,7 +21,7 @@ export function Impact() {
     return(
         <section className="bg-[#EBEBEB] px-6 py-12 md:p-20 flex flex-col items-center space-y-15">
             <div className="flex flex-col items-center space-y-5">
-                <span>Impactful</span>
+                <span className="text-[#FE9921] font-semibold uppercase">Impactful</span>
                 <h2 className="text-3xl font-bold">Vision, Mission & Values</h2>
             </div>
             <div className="flex flex-wrap justify-center gap-10 w-full">

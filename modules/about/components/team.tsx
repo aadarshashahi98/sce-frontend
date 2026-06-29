@@ -26,7 +26,7 @@ export function Team() {
     return (
         <section className="bg-[#F5F5F5] px-6 py-12 md:p-20 flex flex-col justify-center items-center space-y-10 md:space-y-20">
             <div className="flex flex-col justify-center items-center space-y-5">
-                <span>The Team</span>
+                <span className="text-[#FE9921] font-semibold uppercase">The Team</span>
                 <h2 className="text-3xl font-bold">Our Experts</h2>
             </div>
             <div className="flex flex-wrap justify-center gap-10">

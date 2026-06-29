@@ -38,7 +38,7 @@ export function BuiltToLast() {
     return (
         <section className="bg-[#F5F5F5] px-6 py-12 md:p-20 space-y-10">
             <div className="flex flex-col justify-center items-center space-y-5">
-                <span>Built to Last</span>
+                <span className="text-[#FE9921] font-semibold uppercase">Built to Last</span>
                 <h2 className="text-3xl font-bold text-center w-full md:w-100">Where Ideas Become Landmarks</h2>
             </div>
             <div>

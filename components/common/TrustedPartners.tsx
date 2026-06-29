@@ -33,7 +33,7 @@ export const trustedPartners = [
 
 export function TrustedPartners() {
   return (
-    <section className="bg-[#F5F5F5] w-full px-4 py-12 md:px-8 lg:px-16 lg:py-20">
+    <section className="bg-[#EBEBEB] w-full px-4 py-12 md:px-8 lg:px-16 lg:py-20">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">

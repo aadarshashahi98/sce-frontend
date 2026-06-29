@@ -16,7 +16,7 @@ export function About() {
 
             {/* Text content */}
             <div className="flex flex-col justify-center space-y-6 lg:space-y-10 w-full max-w-sm sm:max-w-md lg:max-w-none lg:w-120">
-                <span className="text-sm font-semibold tracking-wide text-gray-500 uppercase">
+                <span className="text-sm text-[#FE9921] font-semibold tracking-wide uppercase">
                     About Us
                 </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">

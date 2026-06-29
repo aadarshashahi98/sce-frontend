@@ -30,7 +30,7 @@ export function TrustTheExperience() {
     return (
         <section className="bg-[#F5F5F5] px-6 py-10 md:p-10 space-y-10 md:space-y-20">
             <div className="flex flex-col justify-center items-center space-y-5">
-                <span>Our Services</span>
+                <span className="text-[#FE9921] font-semibold uppercase">Our Services</span>
                 <h2 className="text-3xl font-bold">Trust The Experience</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

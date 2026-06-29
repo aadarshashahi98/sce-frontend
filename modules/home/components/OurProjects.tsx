@@ -18,7 +18,7 @@ export function OurProjects() {
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-10">
         <div>
-          <span className="text-sm text-[#FE9921] font-semibold">
+          <span className="text-[#FE9921] font-semibold uppercase">
             Our Projects
           </span>
 
