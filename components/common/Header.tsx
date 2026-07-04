@@ -8,9 +8,9 @@ const headerContent: Record<
   { title: string; subtitle?: string; align: string; text: string }
 > = {
   "/": {
-    title: "We are Global Manufacturing Leader",
+    title: "Trusted Electrical & Contracting Experts",
     subtitle:
-      "As a leading global manufacturing company, we pride ourselves in setting industry standards through our commitment to producing high-quality products and providing innovative solutions to cater to the diverse needs of our customers.",
+      "Delivering trusted, efficient, and high-standard solutions for residential, commercial, governmental and industrial projects across Qatar, built on expertise, safety, and a commitment to excellence.",
     align: "items-end",
     text: "text-right",
   },

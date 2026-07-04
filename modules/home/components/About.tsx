@@ -14,10 +14,7 @@ export function About() {
             Trusted Local Construction Partner in Qatar
           </h2>
           <p className="text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
-            At Satipipal, we are proud to serve Qatar with reliable, high-quality
-            construction services. From custom builds to commercial projects, our
-            local expertise ensures every project is done right. We build with
-            integrity, craftsmanship, and a commitment to your vision.
+            We are a professional electrical contracting company based in Qatar, specializing in high-voltage, low-voltage, and industrial electrical solutions. Built on strong field experience, we are committed to delivering safe, efficient, and high-quality engineering services with precision, reliability, and a focus on long-term client satisfaction across all types of infrastructure projects.
           </p>
           <ul className="flex flex-col gap-3 items-center lg:items-start ml-5">
             {["150+ Projects", "Licensed & ISO Certified", "Experienced Team"].map(
