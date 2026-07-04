@@ -10,7 +10,7 @@ export const trustedPartners = [
   { name: "Lightning Electro Mechanical", logo: "/assets/lightning-electro-mechanical.webp" },
   { name: "Credence Trading and Contracting", logo: "/assets/Crecend.png" },
   {
-    name: "Qarae Electro-Mechanical Co. WLL - Qatar (QEMC)",
+    name: "Qatar Electro-Mechanical Co. WLL - Qatar (QEMC)",
     logo: "/assets/electro_mechanical_co_w_l_l_logo.jpg",
   },
   {
