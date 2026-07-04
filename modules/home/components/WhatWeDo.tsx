@@ -55,7 +55,7 @@ export function WhatWeDo() {
                             mx-auto
                             rounded-[40px] sm:rounded-[40px] md:rounded-[50px] lg:rounded-[70px]
                             space-y-2 lg:space-y-3
-                            -mt-14 sm:-mt-12 md:mt-14 lg:-mt-24 xl:-mt-30
+                            -mt-14 sm:-mt-12 md:-mt-14 lg:-mt-24 xl:-mt-30
                             shadow-md">
                             <i className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold">{item.icon}</i>
                             <h3 className="text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg font-bold w-[80%] sm:w-28 md:w-36 lg:w-44 xl:w-50">{item.title}</h3>
