@@ -24,21 +24,21 @@ const headerContent: Record<
   "/services": {
     title: "Our Services",
     subtitle:
-      "Our manufacturing company offers a wide range of services, including product design, prototyping, fabrication, and assembly. We have a team of skilled professionals who ensure top-quality manufacturing solutions for our clients.",
+      "We provide comprehensive electrical and electromechanical solutions built on safety, precision, and reliability. Our experienced team is committed to delivering quality workmanship on every project, big or small.",
     align: "items-start",
     text: "text-left",
   },
   "/projects": {
     title: "Our Projects",
     subtitle:
-      "Explore a showcase of the spaces we've proudly built — and a preview of what's coming next. Every build tells a story of trust, quality, and purpose.",
+      "A track record of trusted electrical and electromechanical works across Qatar from high-voltage terminations to large-scale infrastructure projects. Every project reflects our commitment to safety, quality, and on-time delivery.",
     align: "items-start",
     text: "text-left",
   },
   "/contact-us": {
     title: "Contact Us",
     subtitle:
-      "Explore a showcase of the spaces we've proudly built — and a preview of what's coming next. Every build tells a story of trust, quality, and purpose.",
+      "Have a project in mind or need expert electrical solutions? Reach out to our team - we're ready to discuss your requirements and deliver safe, reliable results.",
     align: "items-start",
     text: "text-left",
   },

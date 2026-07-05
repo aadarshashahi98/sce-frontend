@@ -1,28 +1,52 @@
 export const serviceList = [
     {
-        image: "/assets/terminals.png",
-        title: "Roof Installations",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+        image: "/assets/11kv-joints-termination.png",
+        title: "33KV Jointing & Termination",
+        description: "Expert cable jointing and termination for 33KV systems, ensuring safe and reliable high-voltage connections."
     },{
-        image: "/assets/about.png",
-        title: "Roof Repair",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+        image: "/assets/11kv-joints-termination.png",
+        title: "11KV Jointing & Termination",
+        description: "Precision cable jointing and termination for 11KV systems, built for long-term performance and safety."
     },{
-        image: "/assets/transformer.png",
-        title: "Leak Repair",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+        image: "/assets/LV-joints-termination.png",
+        title: "LV Cable Jointing & Termination",
+        description: "Secure low-voltage cable jointing and termination for consistent, uninterrupted power distribution."
     },{
-        image: "/assets/heroimage.png",
-        title: "Vegetative Roofing",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+        image: "/assets/LV-joints-termination.png",
+        title: "Cable Pulling (LV & 11KV)",
+        description: "Professional cable pulling services for both low-voltage and 11KV networks, carried out to industry safety standards."
     },{
-        image: "/assets/transformer.png",
-        title: "Roof Installations",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+        image: "/assets/11kv-joints-termination.png",
+        title: "Cable Fault Locating",
+        description: "Accurate fault detection and location services to minimize downtime and speed up repair work."
     },{
-        image: "/assets/about.png",
-        title: "Specialty Metal",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+        image: "/assets/mep-work.png",
+        title: "Street Light & High Mast Installation",
+        description: "Complete assembly, installation, and maintenance of street lighting and high mast systems."
+    },{
+        image: "/assets/mep-work.png",
+        title: "MICC Cable Wiring & Glanding",
+        description: "Precision wiring and glanding of MICC cables for reliable, fire-resistant electrical installations."
+    },{
+        image: "/assets/mep-work.png",
+        title: "MEP Works",
+        description: "Coordinated mechanical, electrical, and plumbing solutions that improve performance and reliability."
+    },{
+        image: "/assets/11kv-joints-termination.png",
+        title: "Fire Alarm Systems",
+        description: "Installation and maintenance of fire alarm systems built for early detection and rapid response."
+    },{
+        image: "/assets/mep-work.png",
+        title: "Industrial Electrical Work",
+        description: "Comprehensive electrical services tailored to industrial facilities and heavy-duty operations."
+    },{
+        image: "/assets/LV-joints-termination.png",
+        title: "LV Panel Installation",
+        description: "Safe and efficient installation of low-voltage panels for dependable power management."
+    },{
+        image: "/assets/11kv-joints-termination.png",
+        title: "General Fitters Work",
+        description: "Skilled fitting services covering a wide range of electrical and mechanical installation needs."
     }
 ]
 

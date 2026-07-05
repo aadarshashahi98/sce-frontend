@@ -3,34 +3,46 @@ import { FaCircleCheck } from "react-icons/fa6";
 export const projectsList = [
     {
         image: "assets/terminals.png",
-        title: "Modern Home",
-        description: "2,800 sq. ft. 4BHK custom residential build with outdoor living space and energy-efficient upgrades. Full design-build, interior finishes, landscaping & Private Swimming Pool.",
-        highlights: ["Completed in 6 months", "$450K budget", "Energy rating: 5-star"],
-        type: "Residential"
+        title: "QPU Project - Power China",
+        description: "Design and installation of a temporary power plant to support Power China's operations during the project phase. Full electrical setup delivered with strict attention to safety and reliability standards.",
+        highlights: ["Completed in 1 week", "5-star rating"],
+        type: "Government"
     },{
         image: "assets/transformer.png",
-        title: "Office Hub",
-        description: "6,000 sq. ft. two-story office space with conference rooms, reception, and ADA compliance. Commercial construction, structural planning, HVAC integration. This site is RERA registered project with A+ rating.",
-        highlights: ["Completed in 9 months", "20-person capacity", "Delivered 3 weeks early"],
-        type: "Commercial"
+        title: "Al Masba Farm – Lightening Electromechanical",
+        description: "Complete LV termination works carried out across the Al Masba Farm site, including all cable glanding and jointing. Delivered on a tight timeline without compromising on quality or safety compliance.",
+        highlights: ["Completed in 3 days", "All glanding and termination work"],
+        type: "Government"
     },{
         image: "assets/about.png",
-        title: "Heritage Buildout",
-        description: "Full interior fit-out of a dental clinic including treatment rooms and sterilization stations. Commercial interior build, plumbing, medical-grade fittings.",
-        highlights: ["Built for 6-room practice", "Zero downtime for neighbors", "LEED-compliant design"],
-        type: "Commercial"
+        title: "GTC-194 MIRRIKH Contracting W.L.L",
+        description: "MV/LV joints and termination work executed for MIRRIKH Contracting under a KAHRAMAA-regulated scope. All connections were tested and certified to meet utility-grade standards.",
+        highlights: ["Completed in one week", "All joints and terminations"],
+        type: "KAHRAMAA"
     },{
         image: "assets/heroimage.png",
-        title: "Vista Heights",
-        description: "A premium multi-family residential community featuring 12 townhomes with modern architecture and energy-efficient features. Full design-build, utility layout.",
-        highlights: ["Gated access & Green space", "Solar-ready construction", "2,100–2,400 sq. ft. units"],
-        type: "Residential"
+        title: "GTC-1073/2022 Lighting Electro Mechanical W.L.L",
+        description: "Ongoing MV/LV joints and termination works as part of a long-term KAHRAMAA infrastructure project. Continuous on-site presence since 2024 ensures consistent quality and rapid response to project needs.",
+        highlights: ["From 2024 to till continue", "KAHRAMAA project"],
+        type: "KAHRAMAA"
     },{
         image: "assets/transformer.png",
-        title: "Retail Plaza",
-        description: "A 10,000 sq. ft. retail center with 8 lease-ready units, parking, and ADA accessibility. Commercial site development, steel-frame structure, core and shell delivery.",
-        highlights: ["Zoned for restaurants and retail", "Ample customer parking", "Traffic-heavy location"],
-        type: "Commercial"
+        title: "Al Bustan Highway Bridge – Gharrafa",
+        description: "Facade lighting installation works along the Al Bustan Highway Bridge in partnership with Qatar Electromechanical Company. An ongoing engagement focused on durable, weather-resistant lighting solutions.",
+        highlights: ["From 2024 to till continue"],
+        type: "Ashghal"
+    },{
+        image: "assets/terminals.png",
+        title: "Samsung C&T – Qatar's Largest-Ever Solar Project",
+        description: "MV/LV termination works delivered for Crown Moon on Samsung C&T's landmark solar development at Mesaieed. A high-volume scope executed efficiently across multiple site zones within a compressed schedule.",
+        highlights: ["660 terminations", "Completed in 2 months"],
+        type: "Solar Plant Mesaieed / Qatar Energy / OPTICSENSE W.L.L"
+    },{
+        image: "assets/about.png",
+        title: "CTJV Project – Ras Laffan",
+        description: "High-voltage 33KV joints and termination works completed for the CTJV project at Ras Laffan. A demanding scope handled with precision, meeting Qatar Energy's strict safety and performance requirements.",
+        highlights: ["36 joints / 63 terminations", "Completed in 40 days"],
+        type: "Ras Laffan / Qatar Energy"
     }
 ]
 
