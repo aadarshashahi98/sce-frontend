@@ -5,15 +5,15 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 export const impactList = [{
         icon: <GoGoal />,
         title: "Our Vision",
-        description: "We aim to create lasting spaces that strengthen communities and inspire confidence — built with care and purpose."
+        description: "We aim to power communities and industries with safe, reliable electrical solutions - delivered with care, precision, and purpose."
     },{
         icon: <ImFlag />,
         title: "Our Mission",
-        description: "We make construction simple and dependable through clear communication, skilled craftsmanship, and client-first service."
+        description: "We make electrical and electromechanical works simple and dependable through clear communication, skilled craftsmanship, and client-first service."
     },{
         icon: <FaHandHoldingHeart />,
         title: "Our Values",
-        description: "We build with integrity, treat every project like our own, and prioritize quality over shortcuts. We are committed to doing it right."
+        description: "We work with integrity, treat every project like our own, and prioritize safety and quality over shortcuts. We are committed to doing it right, every time."
     }
 ]
 

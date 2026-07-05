@@ -10,7 +10,7 @@ const contactInfo = [
     },{
         title: "Make a Call",
         icon: <FiPhone />,
-        contact: "+974 7408825"
+        contact: "+974 74088205"
     },{
         title: "Main Office",
         icon: <SlLocationPin />,
