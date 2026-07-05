@@ -23,16 +23,15 @@ export function OurProjects() {
           </span>
 
           <h2 className="mt-2 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            Built to Last.
+            Built on Power.
             <br />
-            Designed to Inspire
+            Driven by Precision.
           </h2>
         </div>
 
         <div className="max-w-lg">
           <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-            From high-end homes to modern office spaces, each Brikly project is
-            a reflection of quality, detail, and dedication.
+            From high-voltage infrastructure to MEP solutions, we deliver safe, reliable, and quality execution at every stage.
           </p>
 
           <button

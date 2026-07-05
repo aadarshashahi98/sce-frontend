@@ -1,6 +1,6 @@
 import { FaCircleCheck } from "react-icons/fa6";
 
-export const aboutList = ["Building Staffs", "History Emphasis", "Economic Outcomes"];
+export const aboutList = ["Skilled Workforce & Technical Expertise", "Strong Commitment to Safety Standards", "18+ Years of Experience Team"]
 
 export function About() {
     return (
@@ -20,11 +20,10 @@ export function About() {
                     About Us
                 </span>
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
-                    We Are Leading International Company In The World
+                    Built on Experience, Trust, and Responsibility
                 </h2>
                 <p className="text-gray-600 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                    luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    We are a dedicated electrical contracting team committed to delivering dependable work through skilled people, disciplined execution, and a strong focus on safety and long-term client relationships.
                 </p>
                 <ul className="space-y-3">
                     {aboutList.map((item, index) => (

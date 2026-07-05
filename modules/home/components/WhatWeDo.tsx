@@ -1,24 +1,24 @@
 "use client"
-import { SlHome } from "react-icons/sl";
-import { HiOutlineOfficeBuilding } from "react-icons/hi"
-import { SiRenovate } from "react-icons/si";
+import { BsFillLightningChargeFill } from "react-icons/bs"
+import { BsPlugFill } from "react-icons/bs";
+import { GiCrane } from "react-icons/gi";
 import { useRouter } from "next/navigation";
 
 export const services = [{
-        icon: <SlHome />,
-        image: "/assets/about.png",
-        title: "Residential Construction",
-        description: "Custom-built homes designed with care, quality, and Austin's unique character in mind."
+        icon: <BsFillLightningChargeFill/>,
+        image: "/assets/11kv-joints-termination.png",
+        title: "11KV Cable Jointing & Termination",
+        description: "Built for maximum safety, seamless power transmission, and long-term system reliability."
     }, {
-        icon: <HiOutlineOfficeBuilding />,
-        image: "/assets/about.png",
-        title: "Commercial Construction",
-        description: "We specialize in commercial builds, delivering functional and innovative spaces."
+        icon: <BsPlugFill />,
+        image: "/assets/LV-joints-termination.png",
+        title: "LV Cable Jointing & Termination",
+        description: "Providing secure electrical connections that ensure efficient and uninterrupted power distribution."
     }, {
-        icon: <SiRenovate />,
-        image: "/assets/about.png",
-        title: "Renovations Remodeling",
-        description: "Transform your existing space with our expert renovation and remodeling services."
+        icon: <GiCrane />,
+        image: "/assets/mep-work.png",
+        title: "MEP Services",
+        description: "Coordinated building solutions that improve performance, efficiency, and operational reliability."
     }
 ]
 
@@ -57,7 +57,7 @@ export function WhatWeDo() {
                             space-y-2 lg:space-y-3
                             -mt-14 sm:-mt-12 md:-mt-14 lg:-mt-24 xl:-mt-30
                             shadow-md">
-                            <i className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold">{item.icon}</i>
+                            <i className="text-3xl text-[#FE9A22] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold">{item.icon}</i>
                             <h3 className="text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg font-bold w-[80%] sm:w-28 md:w-36 lg:w-44 xl:w-50">{item.title}</h3>
                             <p className="text-xs sm:text-[10px] md:text-xs lg:text-sm leading-relaxed">{item.description}</p>
                             <button

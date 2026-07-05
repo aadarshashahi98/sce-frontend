@@ -17,7 +17,7 @@ const headerContent: Record<
   "/about-us": {
     title: "About Us",
     subtitle:
-      "Welcome to Manufacturing Company, where quality meets innovation. With years of experience and a commitment to excellence, we specialize in providing top-notch manufacturing solutions tailored to meet the needs of our clients.",
+      "We focus on delivering dependable electrical solutions built on safety, responsibility, and strong technical knowledge, ensuring consistent quality and long-term trust in every project we undertake.",
     align: "items-start",
     text: "text-left",
   },
